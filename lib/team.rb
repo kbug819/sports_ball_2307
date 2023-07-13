@@ -26,4 +26,19 @@ class Team
     end
   end
 
+  def total_value
+    totals = @roster.map do |player|
+      player.total_cost
+    end
+    totals
+    sum = 0
+    totals.each do |total|
+      sum += total
+    end
+    sum
+  end
+
+  def details
+
+
 end
