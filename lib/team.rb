@@ -32,9 +32,9 @@ class Team
     end
     totals
     sum = 0
-    totals.each do |total|
-      sum += total
-    end
+      totals.each do |total|
+        sum += total
+      end
     sum
   end
 
@@ -44,6 +44,18 @@ class Team
       "player_count" => player_count
     }
   end
+
+  def average_cost_of_player
+    sum = total_value / player_count 
+    formatting = sum.to_s.chars.to_a.reverse.each_slice(3)
+      total = formatting.map do |num|
+        num.join
+      end
+      new = total.join(',').reverse
+    "$#{new}"
+    require 'pry';binding.pry
+  end
+
 
 
 end
