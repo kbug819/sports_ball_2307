@@ -39,6 +39,11 @@ class Team
   end
 
   def details
+    details = {
+      "total_value" => total_value,
+      "player_count" => player_count
+    }
+  end
 
 
 end
