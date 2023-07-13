@@ -53,9 +53,16 @@ class Team
       end
       new = total.join(',').reverse
     "$#{new}"
-    require 'pry';binding.pry
   end
 
+  def players_by_last_name #Couldn't finish within time
+   names = []
+    @roster.each do |player|
+    names << player.last_name.to_s 
+    end
+    names.sort
+    
+  end
 
 
 end
