@@ -14,4 +14,16 @@ class Team
     @roster << player
   end
 
+  def long_term_players
+    @roster.select do |player|
+      player.contract_length > 24
+    end
+  end
+
+  def short_term_players
+    @roster.select do |player|
+      player.contract_length <= 24
+    end
+  end
+
 end
